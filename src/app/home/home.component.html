@@ -1,0 +1,24 @@
+<div class="container">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bienvenido a nuestra tienda<br>de productos deportivos</h1>
+      <p>Encuentra todo lo que necesitas para practicar tu deporte favorito.</p>
+      <a href="#" class="btn btn-explore">Explorar productos</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/logo.png" alt="Imagen de fondo del hero">
+    </div>
+  </section>
+
+  <section class="best-sellers">
+    <h2>Productos más vendidos</h2>
+    <div class="products">
+      <div class="product" *ngFor="let product of bestSellingProducts">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p class="description">{{ product.description }}</p>
+        <p class="price">Precio: {{ product.price }}</p>
+      </div>
+    </div>
+  </section>
+</div>

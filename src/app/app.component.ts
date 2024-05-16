@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {BarraLateralComponent} from "./barra-lateral/barra-lateral.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, BarraLateralComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

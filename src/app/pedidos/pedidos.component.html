@@ -1,0 +1,27 @@
+<div class="pedidos-container">
+  <h1>Pedidos</h1>
+  <div *ngFor="let pedido of pedidos" class="pedido-panel">
+    <h2>Cliente: {{ pedido.nombreCliente }}</h2>
+    <p>Fecha: {{ pedido.fecha }}</p>
+    <div class="productos">
+      <h3>Productos:</h3>
+      <table>
+        <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let producto of pedido.productos">
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.cantidad }}</td>
+          <td>{{ producto.precio | currency }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="total">Total: {{ getTotal(pedido) | currency }}</p>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+/* En tu archivo CSS */
+.toolbar-title {
+  flex-grow: 1; /* Para que el título ocupe todo el espacio disponible */
+  text-align: center; /* Para centrar el texto */
+  font-size: 1.5rem; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  color: white; /* Color del texto */
+  margin-left: -24px; /* Ajuste de margen para centrarlo correctamente */
+}
+
+.toolbar-title:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor */
+}
